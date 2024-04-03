@@ -55,7 +55,7 @@ function App() {
 							position?.classList.remove('move');
 						});
 						clearInterval(interval);
-					}, 1500);
+					}, 1000);
 				}
 			});
 		}
@@ -74,10 +74,10 @@ function App() {
 				const result = [...listScore];
 				result[index].score += randomScoreGenerate(10000);
 				result.sort(compareByScore);
-				await checkPosition(result);
+				// await checkPosition(result);
 				setListScore(result);
 				clearInterval(interval);
-			}, 1500);
+			}, 1000);
 		}
 	}, [listScore]);
 
